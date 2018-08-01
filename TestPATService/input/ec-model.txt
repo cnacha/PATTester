@@ -2,7 +2,7 @@
 {"id":102,"isstartcaller":false,"calls":[]}
 {"id":103,"isstartcaller":false,"calls":[]}
 {"id":104,"isstartcaller":true,"calls":[102,103,109,106]}
-{"id":105,"isstartcaller":false,"calls":[104]}
+{"id":105,"isstartcaller":true,"calls":[104]}
 {"id":106,"isstartcaller":false,"calls":[107]}
 {"id":107,"isstartcaller":false,"calls":[]}
 {"id":108,"isstartcaller":false,"calls":[111,112]}
@@ -15,7 +15,7 @@
 {"id":115,"isstartcaller":false,"calls":[119]}
 {"id":116,"isstartcaller":true,"calls":[102,106,115,113]}
 {"id":117,"isstartcaller":true,"calls":[101]}
-{"id":118,"isstartcaller":false,"calls":[119]}
+{"id":118,"isstartcaller":true,"calls":[119]}
 {"id":119,"isstartcaller":false,"calls":[120,122]}
 {"id":120,"isstartcaller":false,"calls":[121]}
 {"id":121,"isstartcaller":false,"calls":[]}

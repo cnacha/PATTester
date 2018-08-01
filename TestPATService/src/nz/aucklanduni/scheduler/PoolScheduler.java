@@ -19,6 +19,18 @@ public class PoolScheduler {
 	private Stack<SubModel> tasks;
 	
 	private int nextAvailablePool = 0;
+	
+	public List<SubModel> getModels() {
+		return models;
+	}
+
+	public void setModels(List<SubModel> models) {
+		this.models = models;
+		tasks = new Stack<SubModel>();
+		for(int i=models.size()-1; i>=0; i--) {
+			tasks.push(models.get(i));
+		}
+	}
 
 	public void init(int poolNumber, boolean isSync) throws Exception{
 		if(poolNumber > MAX_POOL)
@@ -60,17 +72,7 @@ public class PoolScheduler {
 		}
 	}
 
-	public List<SubModel> getModels() {
-		return models;
-	}
-
-	public void setModels(List<SubModel> models) {
-		this.models = models;
-		tasks = new Stack<SubModel>();
-		for(int i=models.size()-1; i>=0; i--) {
-			tasks.push(models.get(i));
-		}
-	}
+	
 
 	
 

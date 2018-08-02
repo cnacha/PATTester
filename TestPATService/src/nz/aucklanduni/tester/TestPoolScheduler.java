@@ -16,7 +16,7 @@ import nz.aucklanduni.scheduler.PoolScheduler;
 
 public class TestPoolScheduler {
 	
-	private static final String inputFile = "input/erp-model-unlayered-submodel.txt";
+	private static final String inputFile = "input/ec-model-submodel.txt";
 
 	public static void main(String[] args) {
 

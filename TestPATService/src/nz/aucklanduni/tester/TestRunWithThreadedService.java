@@ -25,7 +25,7 @@ public class TestRunWithThreadedService {
 	
 	private static final int N = 40;
 	private static final int connectNo = 2;
-	private static final boolean isSync = true;
+	private static final boolean isSync = false;
 	
 	public static void main(String[] args) {
 		BufferedReader reader = null;
@@ -36,10 +36,10 @@ public class TestRunWithThreadedService {
 
 			//FileReader fileReader = new FileReader(new File("input/arch-"+N+"-"+connectNo+".txt"));
 			//FileReader fileReader = new FileReader(new File("input/erp-model-unlayered-submodel.txt"));
-			FileReader fileReader = new FileReader(new File("input/ec-model-submodel.txt"));
+			FileReader fileReader = new FileReader(new File("input/erp-model.txt"));
 			 reader = new BufferedReader(fileReader);
 			//writer = new BufferedWriter(new FileWriter("result/result-arch-"+N+"-"+connectNo+".csv", true));
-			 writer = new BufferedWriter(new FileWriter("result/result-ec-model-submodel.csv", false));
+			 writer = new BufferedWriter(new FileWriter("result/erp-model.csv", false));
 		   
 			List<VerifierOnThreadedService> verifierList = new ArrayList<VerifierOnThreadedService>();
 			String line = "";

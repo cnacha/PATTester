@@ -44,6 +44,10 @@ public class ServiceRunner {
 	public void setSync(boolean isSync) {
 		this.isSync = isSync;
 	}
+	
+	public void reset() {
+		thread = null;
+	}
 
 	public void execute(){
 		System.out.println("Start executing model: "+model.getId() +" on Port: "+this.portNumber);

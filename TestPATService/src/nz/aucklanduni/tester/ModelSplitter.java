@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Locale;
@@ -26,19 +27,20 @@ import nz.aucklanduni.util.RandomUtil;
 
 public class ModelSplitter {
 	
-	private static final int MAX_COMPONENT = 4;
-	//private static final String inputfile = "input/erp-model-unlayered.txt";
-	//private static final String outputModelfile = "input/erp-model-unlayered-submodel.txt";
-	//private static final String outputResultfile = "result/erp-model-unlayered.csv";
-	private static final String inputfile = "input/ec-model.txt";
-	private static final String outputModelfile = "input/ec-model-submodel.txt";
-	private static final String outputResultfile = "result/ec-model-monolith.csv";
+	private static final int MAX_COMPONENT = 3;
+
+	private static final String testName =  "erp-model-unlayered";
+			
+	private static final String inputfile = "input/"+testName+".txt";
+	private static final String outputModelfile = "input/"+testName+"-submodel.txt";
+	private static final String outputResultfile = "result/"+testName+"-monolith.csv";
 //	private static final String filename = "input/test-model.txt";
 
 	public static void main(String[] args) {
 		Gson gson = new GsonBuilder().create();
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
+		long startTime = (new Date()).getTime();
 		try {
 			FileReader fileReader = new FileReader(new File(inputfile));
 			reader = new BufferedReader(fileReader);
@@ -254,7 +256,8 @@ public class ModelSplitter {
 			printModels(submodelList);
 			writeModels(submodelList, outputModelfile);
 			//printModelsJson(submodelList);
-
+			
+			System.out.println("elpase time:"+((new Date()).getTime() - startTime) +"\n");
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
